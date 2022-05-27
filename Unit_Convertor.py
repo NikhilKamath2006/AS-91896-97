@@ -1,2 +1,4 @@
-print("Hello")
-name =input("what ur name?")
+import tkinter as tk 
+from tkinter import *
+
+
