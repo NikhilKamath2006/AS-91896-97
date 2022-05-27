@@ -11,7 +11,11 @@ root.title("Unit Convertor")
 root.configure(bg='white')
 
 #list of types of possible conversions in the program
-conversion_type = ['Distance/Height','Liquid','Area','Temperature','Weight']
+conversion_options = ['Distance','Liquid','Area','Temperature','Weight']
+
+#List of all distance units
+distance_conversion_Options = ['Kilometer', 'Meter', 'Centimeter', 'Milimeter',
+'Mile', 'Inch', 'Feet']
 
 
 
