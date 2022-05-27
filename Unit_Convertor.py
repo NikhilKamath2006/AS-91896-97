@@ -17,6 +17,17 @@ conversion_options = ['Distance','Liquid','Area','Temperature','Weight']
 distance_conversion_Options = ['Kilometer', 'Meter', 'Centimeter', 'Milimeter',
 'Mile', 'Inch', 'Feet']
 
+# Size of the window
+root.geometry( "600x200" )
+clicked = StringVar()
+
+# The option shown when button is not clicked
+clicked.set( "Distance" )
+
+#Code for the dropdown 
+drop = OptionMenu( root , clicked , *conversion_options )
+drop.pack()
+
 
 
 
