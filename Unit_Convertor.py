@@ -21,7 +21,7 @@ distance_conversion_Options = ['Kilometer', 'Meter', 'Centimeter', 'Milimeter',
 root.geometry( "600x200" )
 clicked = StringVar()
 
-# The option shown when button is not clicked
+# The deafault option shown when button is not clicked
 clicked.set( "Distance" )
 
 #Code for the dropdown 
