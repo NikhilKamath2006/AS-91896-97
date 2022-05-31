@@ -5,8 +5,9 @@ from tkinter import *
 from tkinter import ttk
 
 #opening new window 
-root = tk.Tk()
+root = Tk()
 root.title("Unit Convertor")
+root.geometry('600x700')
 #color of window
 root.configure(bg='white')
 
