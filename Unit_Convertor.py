@@ -41,6 +41,26 @@ def callback(eventObject):
     firstDrop.config(values=conversionOptions[index])
     secondDrop.config(values=conversionOptions[index])
 
+#code for calculation of code
+def calculateConversion(conversionType, from_unit_type, to_unit_type, value):
+    val = float(value)
+    if conversionType == 'Length':
+        from_type_units = conversion_storage.length_conversions[from_unit_type][to_unit_type]
+        new_value = val * float(from_type_units)
+    if conversionType == 'Area':
+        from_type_units = conversion_storage.area_conversion[from_unit_type][to_unit_type]
+        new_value = val * float(from_type_units)
+    if conversionType == 'Mass':
+        from_type_units = conversion_storage.mass_conversions[from_unit_type][to_unit_type]
+        new_value = val * float(from_type_units)
+
+    outLabel.configure(text=new_value)
+
+
+
+
+
+
 
 
 
