@@ -41,7 +41,7 @@ def callback(eventObject):
     firstDrop.config(values=conversionOptions[index])
     secondDrop.config(values=conversionOptions[index])
 
-#code for calculation of code
+#code for calculation of units
 def calculateConversion(conversionType, from_unit_type, to_unit_type, value):
     val = float(value)
     if conversionType == 'Length':
@@ -55,6 +55,7 @@ def calculateConversion(conversionType, from_unit_type, to_unit_type, value):
         new_value = val * float(from_type_units)
 
     outLabel.configure(text=new_value)
+
 
 
 
