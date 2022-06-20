@@ -8,7 +8,10 @@ import conversion_storage #importing information from other file
 #opening window
 root = tk.Tk()
 root.title('Unit Convertor')
-root.configure(bg='#cccccc')
+root.configure(bg='white')
+
+#Making screen size unadjustable
+root.resizable(width=False, height=False)
 
 #lists, i have not moved to a diffrent file since they are better kept here
 typeConversion = ['Length', 'Area', 'Mass']
