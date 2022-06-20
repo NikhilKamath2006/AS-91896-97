@@ -34,6 +34,15 @@ typeDrop.set(typeConversion[0])
 typeDrop.grid(row=1, column=1, columnspan=2)
 typeDrop.bind("<<ComboboxSelected>>", clearOptions)
 
+def callback(eventObject):
+    abc = eventObject.widget.get()
+    typeSelected = typeDrop.get()
+    index = typeConversion.index(typeSelected)
+    firstDrop.config(values=conversionOptions[index])
+    secondDrop.config(values=conversionOptions[index])
+
+
+
 
 
 
