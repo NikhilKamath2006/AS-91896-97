@@ -56,7 +56,29 @@ def calculateConversion(conversionType, from_unit_type, to_unit_type, value):
 
     outLabel.configure(text=new_value)
 
+#design improvment for dropdowns
+firstDrop = ttk.Combobox(root, width=18)
+firstDrop.grid(row=2, column=1, columnspan=1)
+firstDrop.bind('<Button-1>', callback)
 
+secondDrop = ttk.Combobox(root, width=18)
+secondDrop.grid(row=2, column=2, columnspan=1)
+secondDrop.bind('<Button-1>', callback)
+
+#code which allows user to enter value
+inputLabel = Label(root, text='Please enter value to covert: ', bg='#cccccc')
+inputLabel.grid(row=3, column=1, columnspan=2)
+
+valueEntry = Entry(root)
+valueEntry.grid(row=4, column=1, columnspan=1)
+
+#submit button which will start the code
+submitButton = Button(root, text="Submit", command=lambda: calculateConversion(
+    typeDrop.get(), firstDrop.get(), secondDrop.get(), valueEntry.get()))
+submitButton.grid(row=4, column=2)
+
+outLabel = Label(root, text='', bg='#cccccc')
+outLabel.grid(row=5, column=1, columnspan=2)
 
 
 
