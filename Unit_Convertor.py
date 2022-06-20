@@ -5,36 +5,40 @@ from tkinter import *
 from tkinter import ttk
 import conversion_storage #importing information from other file
 
-#opening new window 
-root = Tk()
-root.title("Unit Convertor")
-root.geometry('600x700')
+#opening window
+root = tk.Tk()
+root.title('Unit Convertor')
+root.configure(bg='#cccccc')
 
-#color of window
-root.configure(bg='white')
+#lists, i have not moved to a diffrent file since they are better kept here
+typeConversion = ['Length', 'Area', 'Mass']
 
-#list of types of possible conversions in the program
-conversion_options = ['Distance','Liquid','Area','Temperature','Weight']
-
-#List of all distance units
-distance_conversion_Options = ['Kilometer', 'Meter', 'Centimeter', 'Milimeter',
-'Mile', 'Inch', 'Feet']
-
-# Size of the window
-root.geometry( "600x200" )
-clicked = StringVar()
-
-# The deafault option shown when dropdown is not clicked
-clicked.set( "Distance" )
-
-#Code for the dropdown 
-drop = OptionMenu( root , clicked , *conversion_options )
-drop.pack()
-
-#Possible conversion Units if chosen conversion is Length
-distance_units = ['Kilometer', 'Meter', 'Centimeter', 'Milimeter','Mile', 'Inch', 'Foot']
+conversionOptions = [['Kilometer', 'Meter', 'Centimeter', 'Milimeter',
+                      'Mile', 'Inch', 'Foot'],
+                     ['Sq Kilometer', 'Sq Meter', 'Sq Mile',
+                      'Sq Foot', 'Sq Inch', 'Acre'],
+                     ['Tonne', 'Kilogram', 'Gram', 'Miligram', 'Pound']]
 
 
+
+#clears the options on dropdowns 2 and 3
+def clearOptions(eventObject):
+    firstDrop.set('')
+    secondDrop.set('')
+
+#label showing title
+typeLabel = Label(root, text='Please select type of conversion', bg='#cccccc')
+typeLabel.grid(row=0, column=1, columnspan=2)
+typeDrop = ttk.Combobox(root, width=40, value=(typeConversion))
+typeDrop.set(typeConversion[0])
+typeDrop.grid(row=1, column=1, columnspan=2)
+typeDrop.bind("<<ComboboxSelected>>", clearOptions)
+
+
+
+
+
+    
 
 
 
