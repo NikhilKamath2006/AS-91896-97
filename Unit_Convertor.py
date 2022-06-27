@@ -83,6 +83,7 @@ submitButton.grid(row=4, column=2)
 outLabel = Label(root, text='', bg='#cccccc')
 outLabel.grid(row=5, column=1, columnspan=2)
 
+print("Test")
 
 
 root.mainloop()
