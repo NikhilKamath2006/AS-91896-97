@@ -69,7 +69,7 @@ second_drop.grid(row=2, column=2, columnspan=1)
 second_drop.bind('<Button-1>', callback)
 
 #code which allows user to enter value, a label
-inputLabel = Label(root, text='Please enter value to covert: ', bg='#cccccc')
+inputLabel = Label(root, text='Please enter value to convert: ', bg='#cccccc')
 inputLabel.grid(row=3, column=1, columnspan=2)
 
 valueEntry = Entry(root)
