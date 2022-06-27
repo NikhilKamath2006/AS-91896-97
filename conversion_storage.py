@@ -1,11 +1,6 @@
 
-possible_conversions = [['Kilometer', 'Meter', 'Centimeter', 'Milimeter',
-                      'Mile', 'Inch', 'Foot'],
-                     ['Sq Kilometer', 'Sq Meter', 'Sq Mile',
-                      'Sq Foot', 'Sq Inch', 'Acre'],
-                     ['Tonne', 'Kilogram', 'Gram', 'Miligram', 'Pound'],
-                     ['Celsius', 'Fahrenheit', 'Kalvin']]
 
+#formulas to convert lenght options
 length_conversions = {
     "Kilometer": {"Kilometer": 1, "Meter": 1000, "Centimeter": 100000,
                   "Milimeter": 1000000, "Mile": 1/1.609, "Inch": 39370, "Foot": 3281},
@@ -22,7 +17,7 @@ length_conversions = {
     "Foot": {"Kilometer": 1/3281, "Meter": 1/3.281, "Centimeter": 30.48,
              "Milimeter": 304.8, "Mile": 1/5280, "Inch": 12, "Foot": 1}
 }
-
+#formulas to convert area options
 area_conversion = {
     "Sq Kilometer": {"Sq Kilometer": 1, "Sq Meter": 1000000, "Sq Mile": 1/2.59,
                      "Sq Foot": 10760000, "Sq Inch": 1550000000, "Acre": 247},
@@ -37,7 +32,7 @@ area_conversion = {
     "Acre": {"Sq Kilometer": 1/247, "Sq Meter": 4047, "Sq Mile": 1/640,
              "Sq Foot": 43560, "Sq Inch": 6273000, "Acre": 1}
 }
-
+#formulas to convert mass options
 mass_conversions = {
     "Tonne": {"Tonne": 1, "Kilogram": 1000,
               "Gram": 1000000, "Miligram": 100000000, "Pound": 2205},
